@@ -1,0 +1,220 @@
+@charset "uft-8";
+*{padding: 0; margin: 0; color: #333;}
+li{list-style: none;}
+a{text-decoration: none;
+  display: block;
+  transition: .3s;}
+img{display: block;}
+
+#wrap{width: 1200px; height: 700px; }
+#header{height: 100px; display: flex;}
+#slide{height: 300px; background: rgb(112, 122, 112);}
+#contents{height: 200px; display: flex;}
+#footer{height: 100px; background: rgb(216, 219, 216);
+display: flex;}
+
+.logo{
+    height: 100px;
+    padding-top: 30px;
+}
+nav{background: rgb(200, 214, 200);}
+nav ul{display: flex;}
+.sub{display: none; 
+    background: rgba(232, 230, 230, 0.5);}
+
+.gnb a{
+    line-height: 40px;
+    width: 150px;
+    text-align: center;}
+   
+/* .gnb a:last-child{
+    border-right: 0;
+} */
+.sub a{
+    line-height: 32px;
+}
+.gnb{
+    position: absolute;
+    top: 30px; left: 580px;
+    outline: 1px #333 solid;
+   
+}
+/* .gnb:hover .sub{display: block;} */
+.gnb li:hover > a{
+    background: #333;
+    color: #fff;    
+}
+.gnb>li:last-child{
+    border-right: 0;
+}
+.gnb:hover > li > a{
+    border-bottom: 1px #333 solid;
+}
+.gnb>li>a{
+    border-right: 1px #777 solid;
+    
+}
+.gnb>li:last-child a{
+    border-right: 0;
+}
+
+
+/* -------------------#slide----------------- */
+#slide{overflow: hidden;}
+#slide ul{
+    height: 400%;
+    animation: slide 9s infinite;
+}
+@keyframes slide{
+    0%{margin-top: 0;}
+    33%{margin-top: -300px;}
+    66%{margin-top: -600px;}
+    100%{margin-top: -900px;}
+
+
+}
+
+/* --------------------------contents----------------------- */
+#contents section{
+    width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+   
+}
+#contents section:nth-child(1){
+    background: rgb(227, 230, 227);
+}
+#contents section:nth-child(3){
+    background: rgb(227, 230, 227);
+}
+.tab{display: flex; outline: 1px #333 solid;}
+.tab a{
+    width: 190px;
+    line-height: 38px;    
+    text-align: center;
+}
+.tab li:first-child{
+    border-right:1px #333 solid;;
+}
+.notice{padding-top: 8px;}
+.notice a{
+    display: flex;
+    font-size: 14px;
+    line-height: 21px;
+    border-bottom: 1px #333 solid;
+    justify-content: space-between;
+}
+.notice a:hover {
+    background: #333;
+   
+}
+.notice a:hover div {
+  color: #fff;
+}
+
+#gallery ul{
+    display: flex; 
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+#gallery img{
+    height: 80px;
+}
+#gallery a:hover img{
+    opacity: .5;
+}
+.tab a:hover{
+    background: #333;
+    color: #fff;
+} 
+/* .notice{outline: 1px #333 solid;} */
+.notice{display: none;}
+
+
+#contents section:nth-child(2){
+    background: rgb(220, 225, 220);
+    
+}
+#banner img{
+    height: 100px;
+}
+.title{
+    line-height: 40px;
+    outline: 1px #333 solid;
+    text-align: center;
+}
+#banner ul{display: flex; padding-top: 20px;}
+.banner h3{line-height: 40px; text-align: center;}
+.banner p{
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+.banner li:nth-child(2){
+   margin-left: 15px;
+   margin-top: 9px;
+}
+.banner a:hover img{
+    opacity: .5;
+}
+.banner li:nth-child(2):hover{
+    text-decoration: underline;
+}
+
+#direct img{
+    height: 100px;
+}
+#direct ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+  
+}
+#direct a:hover img{
+    opacity: .5;
+}
+
+
+/* ------------------------#footer---------------------- */
+.f_logo{width: 200px; filter: grayscale(1);}
+.copy{width: 800px; padding: 30px; font-size: 14px;}
+.sns{width: 200px;}
+.sns select{width: 120px; height: 35px; margin-top: 30px;
+            margin-left: 40px;}
+
+
+
+/* --------------------#popup-------------------------- */
+#popup{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 11;
+    display: none;
+}
+.popup_body{
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.popup_body h3{
+    line-height: 80px;
+    text-align: center;
+}
+.popup_body p{
+    line-height: 25px;
+}
+.close{
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 450px;
+}
